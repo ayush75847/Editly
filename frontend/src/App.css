@@ -1,0 +1,202 @@
+body {
+  background-color: #121212; /* dark background */
+  color: #ffffff;           /* default text color */
+  font-family: 'Inter', sans-serif; /* optional */
+  margin: 0;
+  padding: 0;
+}
+/* -------------------------
+   SIGNUP PAGE CONTAINER
+--------------------------*/
+.con {
+    background: #121212;
+}
+
+/* SignUp Form Box */
+.con form {
+    width: 380px;
+    padding: 25px;
+    background: rgba(26, 26, 26, 0.9);
+    border: 1px solid #2b2b2b;
+    border-radius: 15px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(6px);
+    text-align: center;
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Logo */
+.con form img {
+    width: 200px;
+    height: 90px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+}
+
+/* Input fields container */
+.inputBox {
+    width: 100%;
+    margin-top: 18px;
+}
+
+/* Input Styles */
+.inputBox input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    font-size: 15px;
+    border: 1px solid #333;
+    outline: none;
+    background: #1f1f1f;
+    color: white;
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.3);
+    transition: 0.25s;
+}
+
+/* Input focus animation */
+.inputBox input:focus {
+    border-color: #3a7afe;
+    box-shadow: 0 0 10px rgba(58,122,254,0.4),
+                inset 0 0 8px rgba(0,0,0,0.5);
+    background: #222;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* -------------------------
+        BUTTON STYLE
+--------------------------*/
+.btnNormal {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px 14px;
+    background: linear-gradient(135deg, #3a7afe, #0053d8);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    box-shadow: 0 5px 20px rgba(58, 122, 254, 0.4);
+}
+
+/* Hover Animation */
+.btnNormal:hover {
+    background: linear-gradient(135deg, #4c8aff, #0c63ff);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(58, 122, 254, 0.55);
+}
+
+/* Active / Click */
+.btnNormal:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 12px rgba(58, 122, 254, 0.3);
+}
+
+
+/* ----------------------
+   Projects Container
+------------------------*/
+.projects {
+  padding: 0 100px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* space between project cards */
+}
+
+/* ----------------------
+   Single Project Card
+------------------------*/
+.project {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #0f0e0e;
+  border-radius: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.project:hover {
+  background-color: #1a1a1a; /* subtle hover effect */
+}
+
+/* Project Info (Image + Text) */
+.project .project-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.project .project-info img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.project .project-info h3 {
+  font-size: 1.125rem; /* 18px */
+  font-weight: 600;
+  margin: 0;
+}
+
+.project .project-info p {
+  font-size: 0.875rem; /* 14px */
+  color: gray;
+  margin: 2px 0 0 0;
+}
+
+/* ----------------------
+   Project Buttons
+------------------------*/
+.project-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between buttons */
+}
+
+.project-buttons .edit-btn {
+  background-color: #3a7afe;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.project-buttons .edit-btn:hover {
+  background-color: #4c8aff;
+}
+
+.project-buttons .delete-btn {
+  background-color: #ff4c4c;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.project-buttons .delete-btn:hover {
+  background-color: #ff6666;
+}
